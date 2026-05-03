@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제주 감성 여행</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --main-color: #174c43;
+        --point-color: #f28c38;
+        --bg-color: #f8f3e8;
+        --card-color: #fffdf7;
+        --text-color: #333333;
+        --sub-text-color: #666666;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 10px;
+        font-family: "Noto Sans KR", sans-serif;
+        background: var(--bg-color);
+        color: var(--text-color);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      /* Header */
+      .header {
+        padding: 60px 30px;
+        text-align: center;
+        background-image:
+          linear-gradient(rgba(20, 60, 50, 0.45), rgba(20, 60, 50, 0.45)),
+          url("./images/jeju-main.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        border-radius: 0 0 25px 25px;
+      }
+
+      .header h1 {
+        font-family: "Gaegu", cursive;
+        font-size: 80px;
+        margin: 0;
+        letter-spacing: 4px;
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+      }
+
+      .header p {
+        font-family: "Gaegu", cursive;
+        font-size: 30px;
+        margin-top: 15px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+      }
+
+      /* Navigation */
+      .topnav {
+        overflow: hidden;
+        background-color: var(--main-color);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        margin-top: 15px;
+        border-radius: 12px;
+      }
+
+      .topnav a {
+        float: left;
+        display: block;
+        color: #fffaf0;
+        text-align: center;
+        padding: 16px 22px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .topnav a:hover {
+        background-color: var(--point-color);
+        color: white;
+      }
+
+      /* Layout */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .leftcolumn {
+        float: left;
+        width: 70%;
+      }
+
+      .rightcolumn {
+        float: left;
+        width: 30%;
+        padding-left: 20px;
+      }
+
+      /* Card */
+      .card {
+        background-color: var(--card-color);
+        padding: 25px;
+        margin-top: 20px;
+        border: 1px solid #eadfca;
+        border-radius: 18px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 14px;
+      }
+
+      .card h2 {
+        font-size: 28px;
+        color: #174c43;
+        border-left: 6px solid var(--point-color);
+        padding-left: 15px;
+        margin-bottom: 20px;
+      }
+
+      .card h3 {
+        color: #174c43;
+        border-bottom: 2px solid var(--point-color);
+        padding-bottom: 8px;
+      }
+
+      .card p {
+        line-height: 1.8;
+        font-size: 16px;
+      }
+
+      .card ul {
+        padding-left: 20px;
+        line-height: 2;
+      }
+
+      /* Badge */
+      .badge {
+        display: inline-block;
+        background-color: var(--point-color);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 35px;
+        text-align: center;
+        background: var(--main-color);
+        color: #f8f3e8;
+        margin-top: 25px;
+        line-height: 1.8;
+        border-radius: 20px 20px 0 0;
+        font-size: 15px;
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 800px) {
+        .leftcolumn,
+        .rightcolumn {
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .header h1 {
+          font-size: 38px;
+        }
+
+        .topnav a {
+          float: none;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>제주 감성 여행</h1>
+      <p>바람, 바다, 오름이 어우러진 특별한 여행지</p>
+    </div>
+
+    <div class="topnav">
+      <a href="#">여행 소개</a>
+      <a href="#">추천 코스</a>
+      <a href="#">감성 카페</a>
+      <a href="#" style="float: right">여행 예약</a>
+    </div>
+
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <span class="badge">JEJU SPOT</span>
+          <h2>제주의 대표 풍경, 성산일출봉</h2>
+          <img src="./images/seongsan.jpg" alt="성산일출봉 풍경" />
+          <p>
+            <strong>성산일출봉</strong>은 제주를 대표하는 자연 명소 중 하나로,
+            푸른 바다와 웅장한 절벽이 어우러져 아름다운 풍경을 보여줍니다. 특히
+            이른 아침 떠오르는 일출은 제주 여행에서 꼭 경험해볼 만한 장면입니다.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge">CAFE TOUR</span>
+          <h2>바다를 바라보는 제주 감성 카페</h2>
+          <img src="./images/jeju-cafe.jpg" alt="제주 바다 카페" />
+          <p>
+            제주에는 바다를 바라보며 여유를 즐길 수 있는 감성 카페가 많습니다.
+            따뜻한 커피 한 잔과 함께 창밖으로 펼쳐지는 바다를 바라보면, 복잡했던
+            일상에서 잠시 벗어난 듯한 편안함을 느낄 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="rightcolumn">
+        <div class="card">
+          <h3>오늘의 추천</h3>
+          <p>
+            오전에는 성산일출봉을 방문하고, 오후에는 해안도로를 따라
+            드라이브하며 제주 바다를 감상하는 코스를 추천합니다.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>추천 여행지</h3>
+          <ul>
+            <li>성산일출봉</li>
+            <li>협재해수욕장</li>
+            <li>우도</li>
+            <li>카멜리아힐</li>
+            <li>애월 해안도로</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>여행 팁</h3>
+          <p>
+            제주 여행은 날씨에 따라 분위기가 크게 달라지므로, 출발 전 기상
+            정보를 확인하고 바람막이를 준비하는 것이 좋습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>
+        제주 감성 여행 가이드<br />
+        자연과 쉼이 함께하는 특별한 하루
+      </p>
+    </div>
+  </body>
+</html>
